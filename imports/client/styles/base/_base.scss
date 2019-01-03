@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $main-font;
+    font-size: $default-font-size;
+}
+
+h1 {
+    font-weight: 300;
+    margin-bottom: $default-margin;
+}
+
+h2 {
+    font-size: $large-font-size;
+    margin-bottom: $default-margin;
+}
+
+p {
+    margin-bottom: $default-margin;
+}
+
+a {
+    color: $color-black;
+}
+
+input[type=text], input[type=email], input[type=password]{
+    font-size: $default-font-size;
+    margin-bottom: $default-margin;
+    padding: $default-padding;
+    border: 1px solid $color-grey;
+}

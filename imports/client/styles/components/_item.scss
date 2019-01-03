@@ -1,0 +1,44 @@
+.item-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item {
+    background: $color-grey-light;
+    border: 1px solid darken($color-grey-light, 8%);
+    margin-bottom: $default-margin;
+    width: 100%;
+    max-width: calc(20% - (1.4rem * 2));
+    margin: $default-margin;
+    border-radius: 4px;
+
+    &__content{
+        padding: $default-padding;
+        text-align: center;
+
+        & *{
+            margin: 0;
+        }
+    }
+
+    &__actions{
+        display: flex;
+        border-top: 1px solid darken($color-grey-light, 8%);
+        flex-wrap: wrap;
+
+        & *{
+            flex: 0 50%;
+        }
+    }
+
+    &__message {
+        color: $color-grey-dark;
+    }
+
+    &__status-message {
+        color: $color-grey-dark;
+        font-style: italic;
+        text-align: center;
+        margin: 0;
+    }
+}

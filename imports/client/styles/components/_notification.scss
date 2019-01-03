@@ -1,0 +1,23 @@
+.notification{
+    width: 100%;
+    padding: $default-padding;
+    text-align: center;
+
+    &__header{
+        font-size: $x-large-font-size;
+        text-transform: uppercase;
+        font-weight: 600;
+
+        &--neutral{
+            color: $color-grey-dark;
+        }
+    }
+
+    &__message{
+        font-size: $large-font-size;
+
+        &--neutral{
+            color: $color-grey-dark;
+        }
+    }
+}
