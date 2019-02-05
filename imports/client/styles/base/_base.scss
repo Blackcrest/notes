@@ -9,8 +9,10 @@ html {
 }
 
 body {
+    background-color: $color-grey;
     font-family: $main-font;
     font-size: $default-font-size;
+    color: $font-color-1;
 }
 
 h1 {
@@ -28,7 +30,7 @@ p {
 }
 
 a {
-    color: $color-black;
+    color: $font-color-1;
 }
 
 input[type=text], input[type=email], input[type=password]{

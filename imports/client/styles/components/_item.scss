@@ -1,6 +1,8 @@
-.item-wrapper{
-    display: flex;
-    flex-wrap: wrap;
+.item-list{
+    background-color: $color-white;
+    border: 1px solid $color-grey-dark;
+    width: 100%;
+    overflow-y: scroll; 
 }
 
 .item {

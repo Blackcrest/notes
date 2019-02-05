@@ -2,4 +2,16 @@
     max-width: $site-max-width;
     margin: 0 auto;
     padding: $large-padding;
+    display: flex;
+    height: $page-content-height;
+
+    &__sidebar {
+        width: 25%;
+        display: flex;
+    }
+
+    &__main {
+        width: 75%;
+        display: flex;
+    }
 }

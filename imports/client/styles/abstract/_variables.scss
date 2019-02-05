@@ -6,13 +6,15 @@ $color-grey-dark: #777;
 $color-white: #fff;
 $color-black: #000;
 
-$color-primary: #493867;
+$color-primary: #397ab1;
 $color-secondary: #7C6B9A;
 
 $color-error: #cc0000;
 
 // Font variables
 $main-font: 'Work Sans', Arial, sans-serif;
+
+$font-color-1: #333;
 
 $default-font-size: 1.4rem;
 $large-font-size: 1.8rem;
@@ -24,6 +26,9 @@ $default-margin: 1.4rem;
 // Padding variables
 $default-padding: 1rem;
 $large-padding: 1.6rem;
+$x-large-padding: 2rem;
 
 // Sizes
 $site-max-width: 108rem;
+$header-height: 6rem;
+$page-content-height: calc(100vh - #{$header-height})

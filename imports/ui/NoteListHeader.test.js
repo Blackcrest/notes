@@ -40,6 +40,6 @@ if(Meteor.isClient){
 
             expect(call.calls[0].arguments[0]).toBe('notes.insert');
             expect(Session.set).toNotHaveBeenCalled();
-        })
+        });
     });
 }
