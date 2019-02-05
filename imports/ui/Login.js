@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { BrowserRouter, Link } from 'react-router-dom';
+import { BrowserRouter, NavLink } from 'react-router-dom';
 import { withTracker } from 'meteor/react-meteor-data';
 
 export class Login extends React.Component {
@@ -44,9 +44,7 @@ export class Login extends React.Component {
                             <button className="button">Login</button>
                         </form>
                         
-                        <BrowserRouter>
-                            <Link to="/signup">Need an account?</Link>
-                        </BrowserRouter>
+                        <NavLink to="/signup">Need an account?</NavLink>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 import { Accounts } from 'meteor/accounts-base';
 import React from 'react';
 import PropTypes from 'prop-types';
-import { BrowserRouter, Link } from 'react-router-dom';
+import { BrowserRouter, NavLink } from 'react-router-dom';
 import { withTracker } from 'meteor/react-meteor-data';
 
 export class Signup extends React.Component {
@@ -48,9 +48,7 @@ export class Signup extends React.Component {
                             <button className="button">Create Account</button>
                         </form>
 
-                        <BrowserRouter>
-                            <Link to="/">Already have an account?</Link>
-                        </BrowserRouter>
+                        <NavLink to="/">Already have an account?</NavLink>
                     </div>
                 </div>
             </div>

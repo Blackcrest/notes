@@ -3,7 +3,10 @@ import React from 'react';
 import PrivateHeader from './PrivateHeader';
 import NoteList from './NoteList';
 import Editor from './Editor';
+
 import { Session } from 'meteor/session';
+import { Meteor } from 'meteor/meteor';
+import history from '../api/history';
 
 export default class Dashboard extends React.Component{
     constructor(props){
@@ -11,6 +14,10 @@ export default class Dashboard extends React.Component{
     }
 
     componentWillMount(){
+        if(!Meteor.userId()){
+            history.replace('/')
+        }
+
         Session.set('selectedNoteId', this.props.match.params.id);
     }
 
