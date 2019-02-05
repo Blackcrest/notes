@@ -20,6 +20,15 @@ Tracker.autorun(() => {
     onAuthChange(isAuthenticated);
 });
 
+Tracker.autorun(() => {
+    const selectedNoteId = Session.get('selectedNoteId');
+
+    if(selectedNoteId) {
+        history.replace(`/dashboard/${selectedNoteId}`);
+    }
+})
+
 Meteor.startup(() => {
+    Session.set('selectedNoteId', undefined);
     ReactDom.render(routes, document.getElementById('app'));
 });
