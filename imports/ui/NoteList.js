@@ -7,28 +7,17 @@ import { Notes } from '../api/notes';
 
 import NoteListHeader from './NoteListHeader';
 import NoteListItem from './NoteListItem';
+import NoteListEmptyItem from './NoteListEmptyItem';
 
 export const NoteList = (props) => {
-    renderNotes = () => {
-        if(props.notes.length === 0){
-            return (
-                <div>
-                    <p>You have no notes. Click to button to add one.</p>
-                </div>
-                );
-        } else{
-            return props.notes.map((note) => { 
-                return <NoteListItem key={note._id} note={note} />;
-            });
-        }
-    }
-
     return (
         <div>
             <NoteListHeader />
-            { this.renderNotes() }
+            { props.notes.length === 0 ? <NoteListEmptyItem /> : undefined}
 
-            NoteList { props.notes.length }
+            { props.notes.map((note) => { 
+                return <NoteListItem key={note._id} note={note} />;
+            })}
         </div>
     );
 };
