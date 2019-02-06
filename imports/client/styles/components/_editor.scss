@@ -2,4 +2,36 @@
     background-color: $color-white;
     border: 1px solid $color-grey-dark;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: $huge-padding;
+
+    &__title{
+        border: none;
+        border-bottom: 2px solid $color-primary;
+        font-size: $x-large-font-size;
+        outline: none;
+        padding: $default-padding;
+        margin-bottom: $huge-padding;
+        color: $color-primary;
+    }
+
+    &__body{
+        flex-grow: 1;
+        font-weight: 300;
+        margin-bottom: $huge-padding;
+        outline: none;
+        padding: $default-padding;
+        resize: none;
+        font-size: $large-font-size;
+        font-family: $main-font;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    &__message{
+        text-align: center;
+        margin: $large-padding;
+        font-size: $large-font-size;
+        font-weight: 600;
+    }
 }

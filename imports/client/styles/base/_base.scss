@@ -33,7 +33,7 @@ a {
     color: $font-color-1;
 }
 
-input[type=text], input[type=email], input[type=password]{
+.default-input{
     font-size: $default-font-size;
     margin-bottom: $default-margin;
     padding: $default-padding;

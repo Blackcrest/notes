@@ -43,8 +43,8 @@ export class Signup extends React.Component {
                         <h1>Join</h1>
 
                         <form className="boxed-view__form" onSubmit={(e) => this.onSubmit(e)} noValidate>
-                            <input type="email" ref="email" name="email" placeholder="Email" />
-                            <input type="password" ref="password" name="password" placeholder="Password" />
+                            <input className="default-input" type="email" ref="email" name="email" placeholder="Email" />
+                            <input className="default-input" type="password" ref="password" name="password" placeholder="Password" />
                             <button className="button">Create Account</button>
                         </form>
 

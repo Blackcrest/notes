@@ -3,44 +3,49 @@
     border: 1px solid $color-grey-dark;
     width: 100%;
     overflow-y: scroll; 
+    -webkit-overflow-scrolling: touch;
+
+    &__header{
+       display: flex;
+       padding: $default-padding;
+       flex-direction: column;
+    }
 }
 
 .item {
-    background: $color-grey-light;
-    border: 1px solid darken($color-grey-light, 8%);
-    margin-bottom: $default-margin;
-    width: 100%;
-    max-width: calc(20% - (1.4rem * 2));
-    margin: $default-margin;
-    border-radius: 4px;
+    border-left: 3px solid transparent;
+    cursor: pointer;
+    padding: $default-padding;
+    transition: all .3s ease;
 
-    &__content{
-        padding: $default-padding;
-        text-align: center;
+    &:hover{
+        background-color: $color-grey-light;
+        border-left: 3px solid $color-grey-dark;
+    }
 
-        & *{
-            margin: 0;
+    &--selected{
+        border-color: $color-primary;
+        background-color: $color-grey-light;
+
+        .item__title{
+            color: $color-primary;
         }
     }
 
-    &__actions{
-        display: flex;
-        border-top: 1px solid darken($color-grey-light, 8%);
-        flex-wrap: wrap;
-
-        & *{
-            flex: 0 50%;
-        }
+    &__title{
+        font-size: $default-font-size;
+        margin-bottom: .4rem;
     }
 
-    &__message {
+    &__subtitle{
         color: $color-grey-dark;
-    }
-
-    &__status-message {
-        color: $color-grey-dark;
-        font-style: italic;
-        text-align: center;
         margin: 0;
     }
+}
+
+// Empty Item
+.empty-item{
+    padding: $default-padding;
+    text-align: center;
+    font-weight: 600;
 }

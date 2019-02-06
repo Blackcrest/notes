@@ -1,17 +1,52 @@
 .page-content{
     max-width: $site-max-width;
     margin: 0 auto;
-    padding: $large-padding;
+    padding: $huge-padding $large-padding;
     display: flex;
     height: $page-content-height;
 
     &__sidebar {
         width: 25%;
         display: flex;
+        padding-right: $huge-padding;
+        z-index: 1;
+
+        transition: all .4s ease;
+
+        @include respond(phone){
+            position: fixed;
+            top: $header-height;
+            left: -100vw;
+            right: 0;
+            bottom: 0;
+
+            width: 100vw;
+            padding-right: 0;
+        }
     }
 
     &__main {
         width: 75%;
         display: flex;
+
+        @include respond(phone){
+            width: 100%;
+        }
     }
+
+    @include respond(phone){
+        padding: 0;
+    }
+}
+
+.nav-open {
+
+    .page-content{
+
+        &__sidebar{
+            left: 0;
+        }
+
+    }
+
 }
