@@ -1,3 +1,3 @@
-# Boilerplate Meteor Project
+# Notes App
 
-This includes a basic react and auth setup.
+This is a notes application built for a Udemy Course.
